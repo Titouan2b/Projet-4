@@ -10,7 +10,7 @@
         background-color: var(--footer);
         color: white;
         padding: 6%;
-        
+        margin-top: 30px;
     }
 
     footer p{
