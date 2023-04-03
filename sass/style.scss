@@ -81,7 +81,7 @@ main{
         color: #7e7e7e;
     }
 
-    &:hover{
+    &:checked{
         background-color: #F5EDFF;
         i{
             color: $main-color;

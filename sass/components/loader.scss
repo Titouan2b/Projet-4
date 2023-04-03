@@ -11,6 +11,7 @@
     transition: 3s;
     transition-delay: 3s;
     transition-property: opacity;
+    transition-timing-function: ease-in-out;
     svg{
         margin-bottom: 30px;
     }
@@ -20,6 +21,7 @@
 .transition-opacity{
     opacity: 0;
     transition-property: opacity;
+    transition-timing-function: ease-in-out;
 }
 
 .loader {
