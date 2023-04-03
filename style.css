@@ -70,6 +70,15 @@ footer p {
     transform: rotate(360deg);
   }
 }
+header {
+  padding: 3%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+header img {
+  width: 40%;
+}
+
 h1,
 h2,
 p,
@@ -137,8 +146,14 @@ main {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
 }
+.lists i {
+  color: #7e7e7e;
+}
 .lists:hover {
   background-color: #F5EDFF;
+}
+.lists:hover i {
+  color: #9356DC;
 }
 .lists .num-lists {
   width: 20px;
