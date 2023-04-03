@@ -4,6 +4,7 @@
   bottom: 0;
   right: 0;
   left: 0;
+  z-index: 9999;
   height: 100%;
   width: 100%;
   background-color: #353535;
@@ -11,15 +12,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  opacity: 1;
+  opacity: 0;
+  animation: loader 2s linear;
 }
 .container-loader svg {
   margin-bottom: 30px;
-}
-.container-loader.transition-opacity {
-  opacity: 0;
-  transition: opacity 1.5s ease;
-  transition-delay: 2s;
 }
 
 .loader {
@@ -35,10 +32,21 @@
 
 @keyframes rotation {
   0% {
-    transform: rotate(0deg);
+    transform: 0deg;
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 header {
@@ -80,6 +88,24 @@ footer p {
   line-height: 19px;
 }
 
+@media screen and (min-width: 768px) {
+  header {
+    padding: 2%;
+  }
+  header img {
+    width: 15%;
+  }
+  .text h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+  }
+  .text p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
 h1,
 h2,
 p,
@@ -112,6 +138,9 @@ main {
   gap: 20px;
   background-color: #EAEAEA;
 }
+.search-bar p {
+  font-weight: 500;
+}
 
 .text {
   margin: 0 5%;
@@ -139,7 +168,7 @@ main {
   gap: 20px;
 }
 
-.lists {
+.list {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -147,16 +176,16 @@ main {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
 }
-.lists i {
+.list i {
   color: #7e7e7e;
 }
-.lists:checked {
+.list:checked {
   background-color: #F5EDFF;
 }
-.lists:checked i {
+.list:checked i {
   color: #9356DC;
 }
-.lists .num-lists {
+.list .num-list {
   width: 20px;
   height: 20px;
   background-color: #9356DC;
