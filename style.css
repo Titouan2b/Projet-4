@@ -8,19 +8,14 @@
   align-items: center;
   justify-content: center;
   opacity: 1;
-  transition: 3s;
-  transition-delay: 3s;
-  transition-property: opacity;
-  transition-timing-function: ease-in-out;
 }
 .container-loader svg {
   margin-bottom: 30px;
 }
-
-.transition-opacity {
+.container-loader.transition-opacity {
   opacity: 0;
-  transition-property: opacity;
-  transition-timing-function: ease-in-out;
+  transition: opacity 1.5s ease;
+  transition-delay: 2s;
 }
 
 .loader {

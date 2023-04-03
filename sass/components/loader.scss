@@ -8,20 +8,18 @@
     align-items: center;
     justify-content: center;
     opacity: 1;
-    transition: 3s;
-    transition-delay: 3s;
-    transition-property: opacity;
-    transition-timing-function: ease-in-out;
     svg{
         margin-bottom: 30px;
     }
+
+    &.transition-opacity{
+        opacity: 0;
+        transition: opacity 1.5s ease;
+        transition-delay: 2s;
+    }
 }
 
-.transition-opacity{
-    opacity: 0;
-    transition-property: opacity;
-    transition-timing-function: ease-in-out;
-}
+
 
 .loader {
     width: 48px;
