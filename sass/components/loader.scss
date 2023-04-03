@@ -1,0 +1,43 @@
+.container-loader{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: $footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: 3s;
+    transition-delay: 3s;
+    transition-property: opacity;
+    svg{
+        margin-bottom: 30px;
+    }
+}
+
+
+.transition-opacity{
+    opacity: 0;
+    transition-property: opacity;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: $footer;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    }

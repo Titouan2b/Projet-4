@@ -1,9 +1,6 @@
-:root{
-    --main-color:#9356DC ;
-    --second-color:#FF79DA ;
-    --third-color:#99E2D0;
-    --background-color: #F7F7F7;
-}
+@import "./layout/footer.scss";
+@import "./var/var.scss";
+@import "./components/loader.scss";
 
 h1,
 h2,
@@ -20,138 +17,124 @@ button{
 body{
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
+    background-color: $background-color;
 }
 
 section{
     padding: 0 3%;
 }
 
+main{
+    padding-bottom: 15%;
+}
 
+.search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color:#EAEAEA;
+}
 
-@media screen and (max-width: 768px) {
-    
-    header{
-        padding: 3%;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-        text-align: center;
-        img{
-            width: 40%;
-        }
-    }
+.text{
+    margin: 0 5%;
+    text-align: center;
 
-    main{
-        padding-bottom: 15%;
-    }
-    
-    .search-bar{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        background-color:#EAEAEA;
-    }
-    
-    .text{
-        margin: 0 5%;
-        text-align: center;
-
-        button{
-            border: none;
-            color: white;
-            padding: 15px;
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 19px;
-            background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-            border-radius: 25px;
-        }
-    }
-    
-    .fonctionnement{
-        background-color: white;
-    }
-
-
-    .list{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .lists{
-        display: flex;
-        align-items: center;
-        gap: 10px;
+    button{
+        border: none;
+        color: white;
         padding: 15px;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-        border-radius: 20px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        background: linear-gradient(200.64deg, $main-color -5.2%, $second-color 110.74%);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 25px;
+    }
+}
 
-        &:hover{
-            background-color: #F5EDFF;
-        }
+.fonctionnement{
+    background-color: white;
+}
 
-        .num-lists{
-            width: 20px;
-            height: 20px;
-            background-color: #9356DC;
-            border-radius: 10px;
-            color: white;
-            text-align: center;
-        }
+
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lists{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+
+    &:hover{
+        background-color: #F5EDFF;
     }
 
+    .num-lists{
+        width: 20px;
+        height: 20px;
+        background-color: $main-color;
+        border-radius: 10px;
+        color: white;
+        text-align: center;
+    }
+}
 
 
 
-    .card{
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.card{
+    width: 100%;
+    margin: 0;
+
+    img{
+        width: 100%;
+        height: 231px;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+    }
+    
+
+    i:active{
+        color: $main-color;
+    }
+}
+
+article{
+    width: 100%;
+    margin: 0;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+
+    .descrip-card{
+        margin: 0 15px;
         display: flex;
-        flex-direction: column;
         align-items: center;
-        gap: 20px;
-    }
-
-
-    .cards{
-        width: 100%;
-        margin: 0;
-
-        svg:active{
-            color: #9356DC;
-        }
-    }
-
-    article{
-        width: 100%;
-        margin: 0;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-        border-radius: 15px;
-
-        .descrip-card{
-            margin: 0 15px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            
-            div h2{
-                margin-bottom: 0;
-            }
-
-            div p{
-                margin-top: 5px;
-            }
-
+        justify-content: space-between;
+        
+        div h2{
+            margin-bottom: 0;
         }
 
-        img{
-            width: 100%;
-            height: 231px;
-            object-fit: cover;
-            border-radius: 15px 15px 0 0;
-         }
+        div p{
+            margin-top: 5px;
+        }
+        
+
     }
-
-
     
 }
