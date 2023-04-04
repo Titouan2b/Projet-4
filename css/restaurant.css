@@ -1,12 +1,29 @@
 header {
-  padding: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px;
+  gap: 28%;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  text-align: center;
 }
 header img {
-  width: 40%;
+  width: 45%;
+}
+header a i {
+  font-size: 1em;
 }
 
+@media screen and (min-width: 768px) {
+  header {
+    gap: 40%;
+  }
+  header img {
+    width: 15%;
+  }
+  header a i {
+    font-size: 3em;
+  }
+}
 footer {
   background-color: #353535;
   color: white;
@@ -14,21 +31,34 @@ footer {
   margin-top: 30px;
 }
 
+.content-footer {
+  display: flex;
+  flex-direction: column;
+}
+
 footer p {
+  display: flex;
   color: white;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  margin: 5px 10px 5px 0px;
+  margin: 0 10px 5px 0px;
 }
 
-.svg-footer {
+.row {
   display: flex;
+  flex-direction: row;
   align-items: center;
 }
 
-.svg-footer p {
+.i-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.i-footer p {
   margin: 5px 10px;
   margin-left: 10px;
   font-style: normal;
@@ -37,6 +67,53 @@ footer p {
   line-height: 19px;
 }
 
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 6% 3% 3% 0;
+  }
+  .content-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  .content-footer svg {
+    width: 20%;
+    order: 1;
+  }
+  .content-footer .i-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .content-footer .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .content-footer .text-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    order: 0;
+    gap: 30px;
+  }
+  .content-footer .text-footer p {
+    margin: 0 5px;
+  }
+  .content-footer .text-footer-p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .button {
   padding-top: 30px;
   text-align: center;
@@ -51,7 +128,7 @@ button {
   color: white;
 }
 
-.btn {
+.card {
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -60,28 +137,123 @@ button {
   border-radius: 15.0431px;
   padding-left: 15px;
 }
-.btn:hover > .square {
+.card:hover > .square {
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform left 1000ms;
 }
-.btn .square {
+.card .square {
   height: 100%;
   display: none;
   padding: 0 20px;
-  background: var(--third-color);
+  background: #99E2D0;
   border-radius: 0 15px 15px 0;
 }
-.btn-descrip {
+.card-descrip {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
 }
 
-.loader {
+.container-loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
   height: 100%;
   width: 100%;
+  background-color: #353535;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: loader 2s linear;
+}
+.container-loader svg {
+  margin-bottom: 30px;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: 0deg;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+h1,
+h2,
+p,
+a {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F7F7F7;
+}
+
+section {
+  padding: 0 15%;
+}
+
+.background-image {
+  width: 100%;
+}
+.background-image img {
+  width: 100%;
+}
+
+.content-section {
+  position: relative;
+  top: -40px;
+  background-color: #fff;
+  border-radius: 40px 40px 0px 0px;
+  padding: 15px;
+}
+
+.font {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.font h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 41px;
 }
 
 /*# sourceMappingURL=restaurant.css.map */

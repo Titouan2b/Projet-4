@@ -1,6 +1,61 @@
-@import "./layout/header.scss";
+@import "./var/var.scss";
+
+@import "./layout/resto/header-r.scss";
 @import "./layout/footer.scss";
 
 @import "./components/button.scss";
 @import "./components/menu-card.scss";
 @import "./components/loader.scss";
+
+
+h1,
+h2,
+p,
+a{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $background-color;
+}
+
+section{
+    padding: 0 15%;
+}
+
+
+.background-image{
+    width: 100%;
+    img{
+        width: 100%;
+    }
+}
+
+
+.content-section{
+    position: relative;
+    top: -40px;
+    background-color: #fff;
+    border-radius: 40px 40px 0px 0px;
+    padding: 15px;
+}
+
+.font {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1{
+        font-family: 'Shrikhand', sans-serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 41px;
+    }
+    
+}
