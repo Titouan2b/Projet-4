@@ -12,7 +12,8 @@ button{
     color: white;
 
     &:hover{
-        background: rgba(0, 0, 0, 0.1);
+        // background: rgba(0, 0, 0, 0.1);
+        background: linear-gradient(200.64deg, lighten($main-color, 10%) -5.2%, lighten($second-color, 10%) 110.74%);
     }
 }
 
