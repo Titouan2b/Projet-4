@@ -2,6 +2,7 @@
 
 @import "./components/loader.scss";
 @import "./components/accueil-card.scss";
+@import "./components/heart.scss";
 
 @import "./layout/header.scss";
 @import "./layout/footer.scss";
@@ -104,7 +105,10 @@ main{
         background-color: $main-color;
         border-radius: 10px;
         color: white;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -25px
     }
 }
 

@@ -1,4 +1,6 @@
+
 .card{
+    opacity: 0;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -6,6 +8,7 @@
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
     border-radius: 15.0431px;
     padding-left: 15px;
+    animation: slide-in 1s forwards;
 
     &:hover{
         & > .square {
@@ -31,3 +34,26 @@
     }
 }
 
+.card-ent{
+    animation-delay: 0.25s;
+}
+
+.card-pla{
+    animation-delay: 0.75s;
+}
+
+.card-des{
+    animation-delay: 1.25s;
+}
+
+
+@keyframes slide-in {
+    from {
+      transform: translateY(200px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

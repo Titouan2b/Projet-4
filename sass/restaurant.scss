@@ -6,7 +6,7 @@
 @import "./components/button.scss";
 @import "./components/menu-card.scss";
 @import "./components/loader.scss";
-
+@import "./components/heart.scss";
 
 h1,
 h2,
@@ -31,6 +31,7 @@ body{
     width: 100%;
     img{
         width: 100%;
+        object-fit: cover;
     }
 }
 
@@ -42,13 +43,13 @@ section{
     background-color: #fff;
 }
 
-.content-section{
-}
+
 
 .font {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 50px;
     h1{
         font-family: 'Shrikhand', sans-serif;
         font-style: italic;
@@ -60,8 +61,31 @@ section{
 }
 
 
+.ent-pla-des{
+    & h3{
+        text-decoration: none;
+        font-weight: 300;
+    
+        &::after{
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 1px; 
+            bottom: 0; 
+            left: 25%;
+        }
+    }
+}
+
+
 @media screen and (min-width:768px) {
     section{
         margin: 0 15%;
+    }
+
+    .background-image{
+        img{
+            height: 500px;
+        }
     }
 }

@@ -123,7 +123,7 @@ button {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   border: none;
-  padding: 2% 6%;
+  padding: 5% 10%;
   color: white;
 }
 button:hover {
@@ -133,9 +133,11 @@ button:hover {
 @media screen and (min-width: 768px) {
   button {
     font-size: 16px;
+    padding: 2% 6%;
   }
 }
 .card {
+  opacity: 0;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -143,6 +145,7 @@ button:hover {
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
   border-radius: 15.0431px;
   padding-left: 15px;
+  animation: slide-in 1s forwards;
 }
 .card:hover > .square {
   display: flex;
@@ -161,6 +164,32 @@ button:hover {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+}
+
+.card-ent {
+  animation-delay: 0.25s;
+}
+
+.card-pla {
+  animation-delay: 0.75s;
+}
+
+.card-des {
+  animation-delay: 1.25s;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.container-body {
+  animation: body 2s linear;
 }
 
 .container-loader {
@@ -215,6 +244,25 @@ button:hover {
     opacity: 0;
   }
 }
+@keyframes body {
+  0% {
+    display: none;
+  }
+  25% {
+    display: none;
+  }
+  100% {
+    display: block;
+  }
+}
+.fa-heart, .fa-heart .fa-solid {
+  display: none;
+  transition: display 2s;
+}
+.fa-heart, .fa-heart .fa-regular:hover {
+  display: block;
+}
+
 h1,
 h2,
 h3,
@@ -237,6 +285,7 @@ body {
 }
 .background-image img {
   width: 100%;
+  object-fit: cover;
 }
 
 section {
@@ -249,8 +298,9 @@ section {
 
 .font {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 50px;
 }
 .font h1 {
   font-family: "Shrikhand", sans-serif;
@@ -260,9 +310,25 @@ section {
   line-height: 41px;
 }
 
+.ent-pla-des h3 {
+  text-decoration: none;
+  font-weight: 300;
+}
+.ent-pla-des h3::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  bottom: 0;
+  left: 25%;
+}
+
 @media screen and (min-width: 768px) {
   section {
     margin: 0 15%;
+  }
+  .background-image img {
+    height: 500px;
   }
 }
 
