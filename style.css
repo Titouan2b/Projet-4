@@ -1,5 +1,7 @@
 .container-body {
-  animation: body 2s linear;
+  visibility: hidden;
+  opacity: 0;
+  animation: body 3s forwards;
 }
 
 .container-loader {
@@ -18,7 +20,7 @@
   align-items: center;
   justify-content: center;
   opacity: 0;
-  animation: loader 2s linear;
+  animation: loader 2s forwards;
 }
 .container-loader svg {
   margin-bottom: 30px;
@@ -56,13 +58,16 @@
 }
 @keyframes body {
   0% {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
   }
   25% {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
   }
   100% {
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
 }
 .cards {
@@ -117,12 +122,31 @@ article .descrip-card div p {
   margin-top: 5px;
 }
 
-.fa-heart, .fa-heart .fa-solid {
-  display: none;
-  transition: display 2s;
+.heart {
+  position: relative;
 }
-.fa-heart, .fa-heart .fa-regular:hover {
-  display: block;
+.heart .full-heart {
+  position: relative;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.6s ease-in-out;
+}
+.heart .empty-heart {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.heart:hover .empty-heart {
+  opacity: 0;
+  transform: scale(1);
+}
+.heart:hover .full-heart {
+  opacity: 1;
+  color: transparent;
+  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transform: scale(1.2);
 }
 
 header {

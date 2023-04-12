@@ -11,11 +11,15 @@
     animation: slide-in 1s forwards;
 
     &:hover{
+        & .card-descrip{
+            width: 90%;
+        }
         & > .square {
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: transform left 1000ms;
+            // transition: transform left 1000ms;
+            width: 10%;
         }
     }
 

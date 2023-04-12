@@ -1,5 +1,7 @@
 .container-body{
-    animation: body 2s linear;
+    visibility: hidden;
+    opacity: 0;
+    animation: body 3s forwards;
 }
 
 .container-loader{
@@ -18,7 +20,7 @@
     align-items: center;
     justify-content: center;
     opacity: 0;
-    animation: loader 2s linear;
+    animation: loader 2s forwards;
     svg{
         margin-bottom: 30px;
     }
@@ -61,12 +63,15 @@
 @keyframes body {
 
     0% {
-        display: none;
+        visibility: hidden;
+        opacity: 0;
     }
     25% {
-        display: none;
+        visibility: hidden;
+        opacity: 0;
     }
     100% {
-        display: block;
+        visibility: visible;
+        opacity: 1;
     }
 }

@@ -1,14 +1,31 @@
-.fa-heart{
-    &, .fa-solid{
-        display: none;
-        transition: display 2s;
+.heart{
+    position: relative;
+    .full-heart{
+        position: relative;
+        opacity: 0;
+        transform: scale(0);
+        transition: all 0.6s ease-in-out;
     }
 
-    &, .fa-regular:hover{
-        display: block;
+    .empty-heart{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &:hover .empty-heart{
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    &:hover .full-heart{
+        opacity: 1;
+        color: transparent;
+        background-image: linear-gradient(200.64deg, $main-color -5.2%, $second-color 110.74%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        transform: scale(1.2);
     }
 
 
 }
-
-
