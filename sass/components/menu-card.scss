@@ -11,41 +11,49 @@
     padding-left: 15px;
     margin-bottom: 15px;
     animation: slide-in 1s forwards;
-    transition: all 2s ease;
-    p{
-        padding-right: 15px;
+    transition: all 2s ease-in-out; 
+    // p{
+    //     padding-right: 15px;
+    // }
+
+    h3,p{
+        text-overflow: ellipsis;
+        word-break: break-word;
+        overflow: hidden;
     }
-
-
     
 
     &:hover{
         & .card-descrip{
            width: 90%;
-           
+           word-break: break-word;
+           text-overflow: ellipsis;
+           white-space: nowrap;
+           overflow: hidden;
         }
         & > .square {
-            display: flex;
-            align-items: center;
-            justify-content: center;
             width: 10%;
-           
+            visibility: visible;
+            padding: 0 20px;
         }
-
         i{
-            color: white;
+            animation: rotation 1s linear reverse both;
         }
     }
 
     .square{
         height: 100%;
-        display: none;
-        padding: 0 20px;
+        width: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
         background: $third-color;
         border-radius: 0 15px 15px 0;
-        transition: all 2s ease;
+        transition: all 2s ease-in-out;
+        visibility: hidden;
         i{
-            animation: rotation 1s linear reverse both;
+            color: white;
         }
     
         @keyframes rotation {
@@ -63,11 +71,14 @@
         align-items: flex-end;
         justify-content: space-between;
         width: 100%;
-        transition: all 2s ease;
-         p{
-            word-break: break-all;
+        word-break: break-word;
+        text-overflow: ellipsis;
+         p, .card-descrip-text{
+            word-break: break-word;
             text-overflow: ellipsis;
+            overflow: hidden;
          }
+
     }
 }
 

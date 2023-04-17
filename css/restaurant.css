@@ -148,32 +148,42 @@ button:hover {
   padding-left: 15px;
   margin-bottom: 15px;
   animation: slide-in 1s forwards;
+  transition: all 2s ease-in-out;
 }
-.card p {
-  padding-right: 15px;
+.card h3, .card p {
+  text-overflow: ellipsis;
+  word-break: break-word;
+  overflow: hidden;
 }
 .card:hover .card-descrip {
   width: 90%;
+  word-break: break-word;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .card:hover > .square {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 10%;
+  visibility: visible;
+  padding: 0 20px;
 }
 .card:hover i {
-  color: white;
+  animation: rotation 1s linear reverse both;
 }
 .card .square {
   height: 100%;
-  display: none;
-  padding: 0 20px;
+  width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   background: #99E2D0;
   border-radius: 0 15px 15px 0;
-  transition: width 2s ease;
+  transition: all 2s ease-in-out;
+  visibility: hidden;
 }
 .card .square i {
-  animation: rotation 1s linear reverse both;
+  color: white;
 }
 @keyframes rotation {
   0% {
@@ -188,11 +198,13 @@ button:hover {
   align-items: flex-end;
   justify-content: space-between;
   width: 100%;
-  transition: width 2s ease;
-}
-.card-descrip p {
-  word-break: break-all;
+  word-break: break-word;
   text-overflow: ellipsis;
+}
+.card-descrip p, .card-descrip .card-descrip-text {
+  word-break: break-word;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .card-ent {
