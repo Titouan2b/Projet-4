@@ -1,3 +1,18 @@
+body{
+    -webkit-animation: overflow 2s forwards;
+    animation: overflow 2s forwards;
+}
+
+@keyframes overflow {
+    0%{
+        overflow: hidden;
+    }
+
+    100%{
+        overflow: initial;
+    }
+}
+
 .container-body{
     visibility: hidden;
     opacity: 0;

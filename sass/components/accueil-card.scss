@@ -7,6 +7,7 @@
 
 
 .card{
+    position: relative;
     width: 100%;
     margin: 0;
 
@@ -23,15 +24,17 @@
     }
 
     .nouveau{
-        position: relative;
+        width: 80px;
+        position: absolute;
         top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        right: 0.29px;
+        padding-right: 20px;
         
         
         & p {
-            padding: 20px;
+            border-radius: 2px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+            padding: 8px ;
             color: #008766;
             background-color: $third-color;
         }

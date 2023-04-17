@@ -1,25 +1,39 @@
 
 .card{
+    position: relative;
     opacity: 0;
-    height: 100%;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: end;
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
     border-radius: 15.0431px;
     padding-left: 15px;
+    margin-bottom: 15px;
     animation: slide-in 1s forwards;
+    transition: all 2s ease;
+    p{
+        padding-right: 15px;
+    }
+
+
+    
 
     &:hover{
         & .card-descrip{
-            width: 90%;
+           width: 90%;
+           
         }
         & > .square {
             display: flex;
             align-items: center;
             justify-content: center;
-            // transition: transform left 1000ms;
             width: 10%;
+           
+        }
+
+        i{
+            color: white;
         }
     }
 
@@ -29,12 +43,31 @@
         padding: 0 20px;
         background: $third-color;
         border-radius: 0 15px 15px 0;
+        transition: all 2s ease;
+        i{
+            animation: rotation 1s linear reverse both;
+        }
+    
+        @keyframes rotation {
+            0% {
+                transform: (0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     }
 
     &-descrip{
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
+        width: 100%;
+        transition: all 2s ease;
+         p{
+            word-break: break-all;
+            text-overflow: ellipsis;
+         }
     }
 }
 

@@ -8,16 +8,12 @@
 @import "./layout/footer.scss";
 
 
-
-
-
-
-
 h1,
 h2,
 p,
 a,
-button{
+button,
+article{
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     text-decoration: none;
@@ -32,7 +28,7 @@ body{
 }
 
 section{
-    padding: 0 3%;
+    padding: 3%;
 }
 
 main{
@@ -70,6 +66,7 @@ main{
 
 .fonctionnement{
     background-color: white;
+    padding: 30px;
 }
 
 
