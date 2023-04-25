@@ -31,18 +31,21 @@ footer p{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+     p{
+        margin: 5px 10px;
+        margin-left: 10px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+    }
 }
 
-.i-footer p{
-    margin: 5px 10px;
-    margin-left: 10px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
+.i-footer-2{
+    display: flex;
+    align-items: center;
+
 }
-
-
 
 
 
