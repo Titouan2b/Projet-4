@@ -4,6 +4,7 @@
 @import "./components/accueil-card.scss";
 @import "./components/heart.scss";
 
+
 @import "./layout/header.scss";
 @import "./layout/footer.scss";
 
@@ -61,6 +62,10 @@ main{
         background: linear-gradient(200.64deg, $main-color -5.2%, $second-color 110.74%);
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
         border-radius: 25px;
+        
+        &:hover{
+            background: linear-gradient(200.64deg, lighten($main-color, 10%) -5.2%, lighten($second-color, 10%) 110.74%);
+        }
     }
 }
 

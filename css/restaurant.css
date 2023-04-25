@@ -116,6 +116,7 @@ footer p {
 .button {
   padding-top: 30px;
   text-align: center;
+  font-weight: 500;
 }
 
 button {
@@ -133,7 +134,7 @@ button:hover {
 @media screen and (min-width: 768px) {
   button {
     font-size: 16px;
-    padding: 2% 6%;
+    padding: 1.5% 4.5%;
   }
 }
 .card {
@@ -205,6 +206,9 @@ button:hover {
   word-break: break-word;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+.card .price p {
+  font-weight: 700;
 }
 
 .card-ent {
@@ -316,6 +320,7 @@ body {
 }
 .heart {
   position: relative;
+  font-size: 20px;
 }
 .heart .full-heart {
   position: relative;
@@ -387,6 +392,9 @@ section {
   font-size: 28px;
   line-height: 41px;
 }
+.font I {
+  font-size: 20px;
+}
 
 .ent-pla-des h3 {
   text-decoration: none;
@@ -411,6 +419,9 @@ section {
   }
   .ent-pla-des h3::after {
     width: 6%;
+  }
+  .card h3, .card p {
+    word-break: normal;
   }
 }
 

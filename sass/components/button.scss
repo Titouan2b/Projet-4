@@ -1,6 +1,7 @@
 .button{
     padding-top: 30px;
     text-align: center;
+    font-weight: 500;
 }
 
 button{
@@ -12,7 +13,6 @@ button{
     color: white;
 
     &:hover{
-        // background: rgba(0, 0, 0, 0.1);
         background: linear-gradient(200.64deg, lighten($main-color, 10%) -5.2%, lighten($second-color, 10%) 110.74%);
     }
 }
@@ -21,7 +21,7 @@ button{
 @media screen and (min-width:768px) {
     button{
         font-size: 16px;
-        padding: 2% 6%;
+        padding: 1.5% 4.5%;
     }
 }
 

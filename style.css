@@ -140,6 +140,7 @@ article .descrip-card div p {
 
 .heart {
   position: relative;
+  font-size: 20px;
 }
 .heart .full-heart {
   position: relative;
@@ -321,6 +322,9 @@ main {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
+}
+.text button:hover {
+  background: linear-gradient(200.64deg, #ae80e5 -5.2%, #fface8 110.74%);
 }
 
 .fonctionnement {
