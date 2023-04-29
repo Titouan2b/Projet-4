@@ -52,7 +52,7 @@ body {
 
 @keyframes rotation {
   0% {
-    transform: 0deg;
+    transform: rotate(0);
   }
   100% {
     transform: rotate(360deg);
@@ -140,7 +140,7 @@ article .descrip-card div p {
 
 .heart {
   position: relative;
-  font-size: 20px;
+  font-size: 24px;
 }
 .heart .full-heart {
   position: relative;
@@ -214,7 +214,6 @@ footer p {
   flex-direction: column;
   align-items: flex-start;
 }
-
 .i-footer p {
   margin: 5px 10px;
   margin-left: 10px;
@@ -222,6 +221,11 @@ footer p {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+}
+
+.i-footer-2 {
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {

@@ -133,6 +133,7 @@ button {
 }
 button:hover {
   background: linear-gradient(200.64deg, #ae80e5 -5.2%, #fface8 110.74%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (min-width: 768px) {
@@ -166,6 +167,7 @@ button:hover {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  transition: all 2s ease-in-out;
 }
 .card:hover > .square {
   width: 10%;
@@ -192,7 +194,7 @@ button:hover {
 }
 @keyframes rotation {
   0% {
-    transform: 0deg;
+    transform: rotate(0);
   }
   100% {
     transform: rotate(360deg);
@@ -205,6 +207,7 @@ button:hover {
   width: 100%;
   word-break: break-word;
   text-overflow: ellipsis;
+  transition: all 2s ease-in-out;
 }
 .card-descrip p, .card-descrip .card-descrip-text {
   word-break: break-word;
@@ -214,6 +217,7 @@ button:hover {
 .card .price p {
   font-weight: 700;
   word-break: normal;
+  margin-right: 15px;
 }
 
 .card-ent {
@@ -230,7 +234,7 @@ button:hover {
 
 @keyframes slide-in {
   from {
-    transform: translateY(200px);
+    transform: translateY(20px);
     opacity: 0;
   }
   to {
@@ -292,7 +296,7 @@ body {
 
 @keyframes rotation {
   0% {
-    transform: 0deg;
+    transform: rotate(0);
   }
   100% {
     transform: rotate(360deg);
@@ -325,7 +329,7 @@ body {
 }
 .heart {
   position: relative;
-  font-size: 20px;
+  font-size: 24px;
 }
 .heart .full-heart {
   position: relative;
@@ -397,8 +401,8 @@ section {
   font-size: 28px;
   line-height: 41px;
 }
-.font I {
-  font-size: 20px;
+.font i {
+  font-size: 24px;
 }
 
 .ent-pla-des h3 {

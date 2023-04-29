@@ -1,6 +1,6 @@
-@import "./var/var.scss";
+@import "var.scss";
 
-@import "./layout/resto/header-r.scss";
+@import "./layout/header-resto.scss";
 @import "./layout/footer.scss";
 
 @import "./components/button.scss";
@@ -58,8 +58,8 @@ section{
         line-height: 41px;
     }
 
-    I{
-        font-size: 20px;
+    i{
+        font-size: 24px;
     }
     
 }
